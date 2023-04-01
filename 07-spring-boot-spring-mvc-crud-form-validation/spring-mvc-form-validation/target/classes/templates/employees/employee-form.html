@@ -30,14 +30,17 @@
             <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color:red" />
             <input min="2" required type="text" th:field="*{email}" class="form-control mb-4 w-25" placeholder="Email">
             
-            <span th:if="${#fields.hasErrors('priority')}" the:errors="*{priority}" style="color:red" />
+            <span th:if="${#fields.hasErrors('priority')}" th:errors="*{priority}" style="color:red" />
             <input required type="number" th:field="*{priority}" class="form-control mb-4 w-25" placeholder="Priority">
+           
+            <span th:if="${#fields.hasErrors('employeeCode')}" th:errors="*{employeeCode}" style="color:red" />
+            <input required type="text" th:field="*{employeeCode}" class="form-control mb-4 w-25" placeholder="Employee Code">
            
             <button type="submit" class="btn btn-info col-2">Save</button>
         
         </form>
         <hr>
-        <a th:href="@{/employees/list}">Back to Employees List</a>
+        <a th:href="@{/employees/list}" class="btn btn-secondary">Back to Employees List</a>
     </div>
 </body>
 
